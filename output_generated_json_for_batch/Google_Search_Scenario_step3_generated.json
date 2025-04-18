@@ -1,0 +1,25 @@
+{
+  "memo": "画面中央の結果リストの1件目の「リンク」をクリックして",
+  "action": "click",
+  "selector": ".MjjYud:nth-child(1) .yuRUbf > a",
+  "target_hints": [
+    {
+      "type": "css_selector_candidate",
+      "value": ".MjjYud:nth-child(1) .yuRUbf > a",
+      "confidence": "high"
+    },
+    {
+      "type": "nth_child",
+      "value": null,
+      "common_selector": ".MjjYud",
+      "index": 0,
+      "confidence": "medium"
+    },
+    {
+      "type": "role_and_text",
+      "name": null,
+      "value": "Playwright MCP を使ってAIにブラウザ操作をさせてみる ...",
+      "confidence": "low"
+    }
+  ]
+}

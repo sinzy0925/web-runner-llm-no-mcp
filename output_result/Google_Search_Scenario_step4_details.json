@@ -1,0 +1,40 @@
+[
+  {
+    "step": 1,
+    "action": "get_text_content",
+    "memo": "遷移したページのタイトルを取得して",
+    "locator_attempts": [
+      {
+        "hint": {
+          "type": "css_selector_candidate",
+          "value": "head > title",
+          "confidence": "high"
+        },
+        "status": "Fail",
+        "reason": "Found but not visible.",
+        "final_selector_attempted": "<Locator frame=<Frame name= url='https://qiita.com/t-kurasawa/items/fc47a9133dd6cfe1ae7b'> selector='head > title'>",
+        "count": 1,
+        "is_visible": false
+      },
+      {
+        "hint": {
+          "type": "nth_child",
+          "value": null,
+          "common_selector": "head",
+          "index": 0,
+          "confidence": "medium"
+        },
+        "status": "Fail",
+        "reason": "Found but not visible.",
+        "final_selector_attempted": "<Locator frame=<Frame name= url='https://qiita.com/t-kurasawa/items/fc47a9133dd6cfe1ae7b'> selector='head >> nth=0'>",
+        "count": 1,
+        "is_visible": false
+      }
+    ],
+    "selector_used_as_fallback": "head > title",
+    "status": "success",
+    "selector": "head > title",
+    "locator_method": "fallback_selector",
+    "text": "Playwright MCP を使ってAIにブラウザ操作をさせてみる（GitHub Copilot / Cline 環境構築手順付） #githubcopilot - Qiita"
+  }
+]

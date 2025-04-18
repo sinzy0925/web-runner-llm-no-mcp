@@ -1,0 +1,1 @@
+テスト結果: Google_Search_Scenario,結果:ERROR - ステップ2(click) 失敗: Failed to locate required single element for actio,N/A

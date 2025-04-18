@@ -1,0 +1,19 @@
+{
+  "memo": "遷移したページのタイトルを取得して",
+  "action": "get_text_content",
+  "selector": "head > title",
+  "target_hints": [
+    {
+      "type": "css_selector_candidate",
+      "value": "head > title",
+      "confidence": "high"
+    },
+    {
+      "type": "nth_child",
+      "value": null,
+      "common_selector": "head",
+      "index": 0,
+      "confidence": "medium"
+    }
+  ]
+}

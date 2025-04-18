@@ -1,0 +1,12 @@
+[
+    {
+      "case_name": "Google_Search_Scenario",
+      "start_url": "https://www.google.co.jp/",
+      "steps": [
+        {"instruction": "検索ボックスに「Playwright mcp」と入力して"},
+        {"instruction": "検索ボックスの下にある「Google 検索」ボタンをクリックして"},
+        {"instruction": "画面中央の結果リストの1件目の「リンク」をクリックして"},
+        {"instruction": "遷移したページのタイトルを取得して"}
+      ]
+    }
+  ]

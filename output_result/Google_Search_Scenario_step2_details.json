@@ -1,0 +1,41 @@
+[
+  {
+    "step": 1,
+    "action": "click",
+    "memo": "検索ボックスの下にある「Google 検索」ボタンをクリックして",
+    "locator_attempts": [
+      {
+        "hint": {
+          "type": "aria_label",
+          "value": "Google 検索",
+          "confidence": "high"
+        },
+        "status": "Fail",
+        "reason": "Multiple elements (2).",
+        "final_selector_attempted": "<Locator frame=<Frame name= url='https://www.google.co.jp/'> selector='internal:label=\"Google \\\\u691c\\\\u7d22\"s'>",
+        "count": 2
+      },
+      {
+        "hint": {
+          "type": "role_and_text",
+          "name": "Google 検索",
+          "confidence": "medium",
+          "role": "button"
+        },
+        "status": "Success",
+        "reason": "Found unique/visible.",
+        "final_selector_attempted": "<Locator frame=<Frame name= url='https://www.google.co.jp/'> selector='internal:role=button[name=\"Google 検索\"i]'>",
+        "count": 1,
+        "is_visible": true
+      }
+    ],
+    "locator_hint_used": {
+      "type": "role_and_text",
+      "name": "Google 検索",
+      "confidence": "medium",
+      "role": "button"
+    },
+    "status": "success",
+    "new_page_opened": false
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "step": 1,
+    "action": "input",
+    "memo": "検索ボックスに「Playwright mcp」と入力して",
+    "locator_attempts": [
+      {
+        "hint": {
+          "type": "aria_label",
+          "value": "検索",
+          "confidence": "high"
+        },
+        "status": "Success",
+        "reason": "Found unique/visible.",
+        "final_selector_attempted": "<Locator frame=<Frame name= url='https://www.google.co.jp/'> selector='internal:label=\"\\\\u691c\\\\u7d22\"s'>",
+        "count": 1,
+        "is_visible": true
+      }
+    ],
+    "locator_hint_used": {
+      "type": "aria_label",
+      "value": "検索",
+      "confidence": "high"
+    },
+    "status": "success",
+    "value": "Playwright mcp"
+  }
+]
