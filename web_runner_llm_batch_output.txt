@@ -1,1 +1,1 @@
-テスト結果: Google_Search_Scenario,結果:成功 (ステップ4(get_text_content): 成功),Google_Search_Scenario_final_screenshot.png
+テスト結果: Google_Search_Scenario,結果:成功 (ケース未実行),Google_Search_Scenario_final_screenshot.png

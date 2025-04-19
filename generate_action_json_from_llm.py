@@ -132,6 +132,7 @@ def get_element_info_list_with_fallback(
 
 2.  **フォールバックセレクター (fallback_selector):** もし特定可能であれば、最も信頼でき、構造変化に強く、簡潔な単一のCSSセレクター (文字列) を指定してください。IDや意味のある属性（role, name, data-testidなど）を優先してください。特定が難しい、あるいは不要と判断した場合は null を指定してください。
     - **ユーザーがselectorを指定した場合は、必ずそのselectorをfallback_selectorに設定すること。）
+    - **アクションが press_key で、指示に対象要素の指定がない場合は、fallback_selector は null としてください。
 
 # ユーザーの指示
  「{instruction}」
@@ -145,12 +146,14 @@ def get_element_info_list_with_fallback(
         - 指示に「**リンク先コンテンツ**」または「**リンク先の内容**」が含まれ、「**全て**の」が含まれない場合:
             `"action_type": "get_attribute"`, `"attribute_name": "content"`
         # --- ▲▲▲ ---
-        # [最重要] 指示に「**リンク先URL**」または「**href属性**」が含まれ、「**全て**の」が含まれる場合:
+        # [最重要] 指示に「**リンク先URL**」または「**href**」が含まれ、「**全て**の」が含まれる場合:
             `"action_type": "get_all_attributes"`, `"attribute_name": "href"`
-        - 指示に「**リンク先URL**」または「**href属性**」が含まれ、「**全て**の」が含まれない場合:
+        - 指示に「**リンク先URL**」または「**href**」が含まれ、「**全て**の」が含まれない場合:
             `"action_type": "get_attribute"`, `"attribute_name": "href"`
-        - 指示に「**PDFの内容**」が含まれる場合:
-            `"action_type": "get_attribute"` または `"get_all_attributes"`, `"attribute_name": "pdf"` (「全ての」があれば `get_all_attributes`)
+        - 指示に「**PDF**」が含まれ、、「**全て**の」が含まれる場合:
+            `"action_type": "get_all_attributes"`, `"attribute_name": "pdf"`
+        - 指示に「**PDF**」が含まれ、、「**全て**の」が含まれない場合:
+            `"action_type": "get_attribute"`, `"attribute_name": "pdf"`
         - 指示に「**メールアドレス**」が含まれる場合:
             `"action_type": "get_attribute"` または `"get_all_attributes"`, `"attribute_name": "mail"` (「全ての」があれば `get_all_attributes`)
         - 指示に「**テキスト**を取得」のような記述があり、上記以外の場合:
@@ -163,12 +166,17 @@ def get_element_info_list_with_fallback(
         - 指示に「**ドロップダウン**」「**選択**」が含まれる場合: `"action_type": "select_option"`
         - 指示に「**スクロール**」が含まれる場合: `"action_type": "scroll_to_element"` または `"scroll_page_to_bottom"`
         - 指示に「**待機**」が含まれる場合: `"action_type": "sleep"`
+        - 指示に「キーボードの」「キーを」「押して」「押す」などが含まれ、特定のキー名（Enter, ArrowUp, ArrowDown, ArrowRight, ArrowLeft, Tab, Escape, Backspace, Delete, Home, End, PageUp, PageDown など、または単一の英数字）が指定されている場合:
+            - "action_type": "press_key"
+            - "value": 押すべきキー名 (例: "Tab","ArrowDown", "Enter", "A") を設定。
+            - "count": (Optional) もし指示に「〇回」のように回数指定があれば、その数値を設定。なければ null または 1。
         - 上記ルールで判断できない場合は `"action_type": "unknown"`。
     - **その他のパラメータ:**
         - value: (Optional) "input", "sleep" の場合。指示から正確に抽出。
         - attribute_name: (Optional) "get_attribute", "get_all_attributes" の場合。**上記のルールに従って設定すること。**
         - option_type: (Optional) "select_option" の場合。
         - option_value: (Optional) "select_option" の場合。
+        - "count": "繰り返し回数 or null" // press_key用に追加
 
 出力JSONフォーマット (この形式のJSONオブジェクトのみを出力すること):
 {{

@@ -1,0 +1,4 @@
+テスト結果: case01google,結果:成功 (ケース未実行),case01google_final_screenshot.png
+テスト結果: case02google-next,結果:成功 (ケース未実行),case02google-next_final_screenshot.png
+テスト結果: case03cw-url,結果:成功 (ケース未実行),case03cw-url_final_screenshot.png
+テスト結果: case04tdnet,結果:成功 (ケース未実行),case04tdnet_final_screenshot.png

@@ -1,0 +1,2 @@
+https://crowdworks.jp/public/jobs/search?category_id=228&order=new&page=1
+画面中央のリンク先リストから、クラス=wB71rを含む「URL」を全部取得して

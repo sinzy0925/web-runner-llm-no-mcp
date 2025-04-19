@@ -1,1 +1,1 @@
-テスト結果: Google_Search_Scenario,結果:ERROR - ステップ2(click) 失敗: Failed to locate required single element for actio,N/A
+テスト結果: Google_Search_Scenario,結果:ERROR - ステップ1 内部エラー: ステップ1: HTML取得失敗,N/A

@@ -1,0 +1,5 @@
+https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+検索ボックスに「パキシル」と入力して
+画面中央上部の「検索」ボタンをクリックして
+検索結果テーブル「#SearchWrap02」が表示されるまで待機してください
+検索結果テーブルの最初の行にあるHTMLリンク「#ResultList > tbody > tr:first-child td a:has-text('HTML')」をクリックしてください。

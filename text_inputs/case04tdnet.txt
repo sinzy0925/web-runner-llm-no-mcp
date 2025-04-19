@@ -1,0 +1,10 @@
+https://www.release.tdnet.info/index.html
+画面上部検索期間の右のセレクトボックス「#searchmenu > form > dl > dd:nth-child(2) > select:nth-child(1)」をクリックしてください。
+「下矢印」キーを押してください。
+「下矢印」キーを押してください。
+「下矢印」キーを押してください。
+「下矢印」キーを押してください。
+「Enter」キーを押してください。
+IDが「freewordtxt」の入力欄に「不動産」と入力してください。
+「Enter」キーを押してください。
+リンク先テキストのPDFを全部取得してください。(attribute_name: pdf)

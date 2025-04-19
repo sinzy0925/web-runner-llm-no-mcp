@@ -1,0 +1,4 @@
+https://www.google.co.jp/
+検索ボックスに「Playwright mcp」と入力して
+Enterキーを押して
+画面中央のリンク先リストから「コンテンツ」を全部取得して
